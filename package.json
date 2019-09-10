@@ -5,7 +5,10 @@
   "main": "webpack.config.js",
   "scripts": {
     "test": "jest",
-    "start": "webpack -d --watch & live-server --port=3030 --watch=dist --open=dist"
+    "start": "node server.js",
+    "react-dev": "webpack -d --watch",
+    "server-dev": "nodemon server.js",
+    "build": "webpack --mode production"
   },
   "repository": {
     "type": "git",
@@ -23,14 +26,15 @@
     "cors": "^2.8.5",
     "express": "^4.17.0",
     "mongoose": "^5.5.14",
+    "mysql": "^2.17.1",
     "react": "^16.8.6",
     "react-dom": "^16.8.6"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.5",
     "@babel/preset-env": "^7.4.5",
     "@babel/preset-react": "^7.0.0",
-    "@babel/plugin-proposal-class-properties": "^7.4.5",
     "babel-loader": "^8.0.6",
     "live-server": "^1.2.1",
     "nodemon": "^1.19.0",
